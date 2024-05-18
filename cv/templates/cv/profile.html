@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+    div {
+        position: absolute ; 
+    }
+    h2 {
+        color: black;
+        margin: auto;
+    }
+    hr{
+        color: black;
+    }
+    h3{
+        color: black;
+    }
+    body{
+        background-color:darkorange;
+    }
+
+   </style>
+</head>
+<body>
+    <h1>Welcome To My CV!</h1>
+<a href="/about/">
+    <div>
+        <p>
+            <h2>{{user.name|title}}</h2>
+            <br>
+            <hr>
+            <h2>{{user.email}}</h2>
+            <br>
+            <hr>
+            <h2>{{user.phone}}</h2>
+            <br>
+            <h3>Click!</h3>
+        </p>
+    </div>
+</a>
+</body>
+</html>

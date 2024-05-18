@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+    div{
+        position: static;
+        background-color: color(from color srgb r g b);
+        user-select: none;
+    }
+    body{
+        background-color: darkorange;
+    }
+    .fa-brands{
+        color: black;
+        font-size: 50px;
+        user-select: none;
+    }
+    .contact{
+        margin-left: 30%;
+        margin-top: -700px;
+        user-select: none;
+    }
+    h3{
+        user-select: none;
+    }
+    h1{
+        user-select: none;
+    }
+    h2{
+        user-select: none;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h1>More About Me</h1>
+    <div>
+        <p>
+            <h2>{{user.name|title}}</h2>
+            <br>
+            <hr>
+            <h2>{{user.email}}</h2>
+            <br>
+            <hr>
+            <h2>{{user.phone}}</h2>
+            <br>
+        </p>
+    </div>
+    <div>
+        <h2>Skills</h2>
+        <h3>{{user.skills|title}}</h3>
+    </div>
+    <div>
+        <h2>Education</h2>
+        <h3>{{user.education|title}}</h3>
+    </div>
+    <div>
+        <h2>Summary</h2>
+        <h3>{{user.summary|title}}</h3>
+    </div>
+    <div>
+        <h2>Experience</h2>
+        <h3>{{user.experience|title}}</h3>
+    </div>
+    <div class="contact">
+        <h3>Social Media</h3>
+        <a target="_blank" href="{%url 'contact' 'github'%}"> <i class="fa-brands fa-square-github"></i></a>
+        <a target="_blank" href="{%url 'contact' 'instagram'%}"><i class="fa-brands fa-square-instagram"></i> </a>
+        <a target="_blank" href="{%url 'contact' 'linkedin'%}"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+</body>
+</html>
